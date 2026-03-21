@@ -1,0 +1,201 @@
+openapi: 3.1.0
+info:
+  title: Gallagher Command Centre REST API
+  description: >-
+    The Gallagher Command Centre REST API provides HTTP functions for querying
+    the Command Centre database and integrating third-party systems with
+    Gallagher's security platform. Supports access control, alarm monitoring,
+    cardholder management, and site management operations.
+  version: 9.0.0
+  contact:
+    name: Gallagher Security
+    url: https://gallaghersecurity.github.io/
+  license:
+    name: Proprietary
+    url: https://security.gallagher.com/
+servers:
+  - url: https://localhost:8904/api
+    description: >-
+      Local Command Centre server (default). Replace with your Command Centre
+      server address.
+paths:
+  /cardholders:
+    get:
+      operationId: listCardholders
+      summary: List Cardholders
+      description: Retrieve a list of cardholders in the Command Centre system.
+      tags:
+        - Cardholders
+      parameters:
+        - name: top
+          in: query
+          required: false
+          description: Maximum number of results to return.
+          schema:
+            type: integer
+        - name: name
+          in: query
+          required: false
+          description: Filter by cardholder name.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of cardholders returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        href:
+                          type: string
+                        id:
+                          type: string
+                        firstName:
+                          type: string
+                        lastName:
+                          type: string
+                        authorised:
+                          type: boolean
+        '401':
+          description: Unauthorized.
+  /alarms:
+    get:
+      operationId: listAlarms
+      summary: List Alarms
+      description: Retrieve a list of active alarms in the Command Centre system.
+      tags:
+        - Alarms
+      parameters:
+        - name: top
+          in: query
+          required: false
+          description: Maximum number of results to return.
+          schema:
+            type: integer
+        - name: source
+          in: query
+          required: false
+          description: Filter by alarm source.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of alarms returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        href:
+                          type: string
+                        id:
+                          type: string
+                        type:
+                          type: string
+                        source:
+                          type: string
+                        time:
+                          type: string
+                          format: date-time
+                        state:
+                          type: string
+        '401':
+          description: Unauthorized.
+  /access_groups:
+    get:
+      operationId: listAccessGroups
+      summary: List Access Groups
+      description: Retrieve a list of access groups configured in Command Centre.
+      tags:
+        - Access Groups
+      responses:
+        '200':
+          description: List of access groups returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        href:
+                          type: string
+                        id:
+                          type: string
+                        name:
+                          type: string
+        '401':
+          description: Unauthorized.
+  /events:
+    get:
+      operationId: listEvents
+      summary: List Events
+      description: Retrieve recent events from Command Centre.
+      tags:
+        - Events
+      parameters:
+        - name: after
+          in: query
+          required: false
+          description: Return events after this event ID.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Events returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  events:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        time:
+                          type: string
+                          format: date-time
+                        message:
+                          type: string
+                        type:
+                          type: string
+                        source:
+                          type: object
+                          properties:
+                            href:
+                              type: string
+                            name:
+                              type: string
+                  next:
+                    type: object
+                    properties:
+                      href:
+                        type: string
+        '401':
+          description: Unauthorized.
+tags:
+  - name: Cardholders
+    description: Manage cardholders in the security system.
+  - name: Alarms
+    description: Monitor and manage security alarms.
+  - name: Access Groups
+    description: Manage access control groups.
+  - name: Events
+    description: Retrieve security events and audit logs.
