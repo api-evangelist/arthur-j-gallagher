@@ -1,0 +1,67 @@
+name: Arthur J. Gallagher
+description: >-
+  Arthur J. Gallagher & Co. is a global insurance brokerage, risk management,
+  and consulting firm. The company's subsidiaries include Gallagher Security
+  (which offers the Command Centre REST API) and Gallagher Bassett (which
+  offers a claims management API).
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://github.com/api-evangelist/arthur-j-gallagher/blob/main/apis.yml
+created: '2025-03-01'
+modified: '2025-03-01'
+specificationVersion: '0.18'
+tags:
+  - Insurance
+  - Brokerage
+  - Risk Management
+  - Security
+  - Claims Management
+apis:
+  - name: Gallagher Command Centre REST API
+    description: >-
+      REST API providing HTTP functions to query and integrate with the
+      Gallagher Command Centre security platform. Enables third-party systems
+      to interact with access control, alarm monitoring, and site management
+      features.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://gallaghersecurity.github.io/
+    baseURL: https://localhost:8904/api
+    tags:
+      - Security
+      - Access Control
+      - Alarms
+      - Integration
+    properties:
+      - type: Documentation
+        url: https://gallaghersecurity.github.io/
+      - type: OpenAPI
+        url: openapi/gallagher-command-centre-api.yml
+      - type: GitHub Repository
+        url: https://github.com/GallagherSecurity/cc-rest-docs
+  - name: Gallagher Bassett API
+    description: >-
+      API for integrating with Gallagher Bassett claims management services.
+      Gallagher Bassett is a global claims management provider and subsidiary
+      of Arthur J. Gallagher.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://developer.gallagherbassett.com/
+    baseURL: https://api.gallagherbassett.com
+    tags:
+      - Claims
+      - Insurance
+      - Risk Management
+    properties:
+      - type: Documentation
+        url: https://developer.gallagherbassett.com/
+common:
+  - type: Website
+    url: https://www.ajg.com/
+  - type: Gallagher Security Developer Docs
+    url: https://gallaghersecurity.github.io/
+  - type: Gallagher Bassett Developer Portal
+    url: https://developer.gallagherbassett.com/
+  - type: GitHub
+    url: https://github.com/GallagherSecurity
+maintainers:
+  - FN: API Evangelist
+    url: https://apievangelist.com
+    email: info@apievangelist.com
