@@ -10,11 +10,11 @@ created: '2025-03-01'
 modified: '2025-03-01'
 specificationVersion: '0.18'
 tags:
-  - Insurance
   - Brokerage
+  - Claims Management
+  - Insurance
   - Risk Management
   - Security
-  - Claims Management
 apis:
   - name: Gallagher Command Centre REST API
     description: >-
@@ -26,10 +26,10 @@ apis:
     humanURL: https://gallaghersecurity.github.io/
     baseURL: https://localhost:8904/api
     tags:
-      - Security
       - Access Control
       - Alarms
       - Integration
+      - Security
     properties:
       - type: Documentation
         url: https://gallaghersecurity.github.io/
