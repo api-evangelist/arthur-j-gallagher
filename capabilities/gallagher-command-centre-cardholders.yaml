@@ -1,0 +1,82 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Gallagher Command Centre REST API — Cardholders
+  description: 'Gallagher Command Centre REST API — Cardholders. 1 operations. Lead operation: List Cardholders. Self-contained
+    Naftiko capability covering one Arthur J Gallagher business surface.'
+  tags:
+  - Arthur J Gallagher
+  - Cardholders
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ARTHUR_J_GALLAGHER_API_KEY: ARTHUR_J_GALLAGHER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: gallagher-command-centre-cardholders
+    baseUri: https://localhost:8904/api
+    description: Gallagher Command Centre REST API — Cardholders business capability. Self-contained, no shared references.
+    resources:
+    - name: cardholders
+      path: /cardholders
+      operations:
+      - name: listcardholders
+        method: GET
+        description: List Cardholders
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: top
+          in: query
+          type: integer
+          description: Maximum number of results to return.
+        - name: name
+          in: query
+          type: string
+          description: Filter by cardholder name.
+  exposes:
+  - type: rest
+    namespace: gallagher-command-centre-cardholders-rest
+    port: 8080
+    description: REST adapter for Gallagher Command Centre REST API — Cardholders. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/cardholders
+      name: cardholders
+      description: REST surface for cardholders.
+      operations:
+      - method: GET
+        name: listcardholders
+        description: List Cardholders
+        call: gallagher-command-centre-cardholders.listcardholders
+        with:
+          top: rest.top
+          name: rest.name
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: gallagher-command-centre-cardholders-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Gallagher Command Centre REST API — Cardholders. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: list-cardholders
+      description: List Cardholders
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: gallagher-command-centre-cardholders.listcardholders
+      with:
+        top: tools.top
+        name: tools.name
+      outputParameters:
+      - type: object
+        mapping: $.

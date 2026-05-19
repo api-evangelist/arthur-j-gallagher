@@ -1,0 +1,76 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Gallagher Command Centre REST API — Events
+  description: 'Gallagher Command Centre REST API — Events. 1 operations. Lead operation: List Events. Self-contained Naftiko
+    capability covering one Arthur J Gallagher business surface.'
+  tags:
+  - Arthur J Gallagher
+  - Events
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    ARTHUR_J_GALLAGHER_API_KEY: ARTHUR_J_GALLAGHER_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: gallagher-command-centre-events
+    baseUri: https://localhost:8904/api
+    description: Gallagher Command Centre REST API — Events business capability. Self-contained, no shared references.
+    resources:
+    - name: events
+      path: /events
+      operations:
+      - name: listevents
+        method: GET
+        description: List Events
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: after
+          in: query
+          type: string
+          description: Return events after this event ID.
+  exposes:
+  - type: rest
+    namespace: gallagher-command-centre-events-rest
+    port: 8080
+    description: REST adapter for Gallagher Command Centre REST API — Events. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/events
+      name: events
+      description: REST surface for events.
+      operations:
+      - method: GET
+        name: listevents
+        description: List Events
+        call: gallagher-command-centre-events.listevents
+        with:
+          after: rest.after
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: gallagher-command-centre-events-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Gallagher Command Centre REST API — Events. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: list-events
+      description: List Events
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: gallagher-command-centre-events.listevents
+      with:
+        after: tools.after
+      outputParameters:
+      - type: object
+        mapping: $.
