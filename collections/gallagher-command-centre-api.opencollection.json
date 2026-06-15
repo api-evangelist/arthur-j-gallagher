@@ -1,0 +1,122 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gallagher Command Centre REST API",
+    "version": "9.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cardholders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Cardholders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://localhost:8904/api/cardholders",
+            "params": [
+              {
+                "name": "top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "Filter by cardholder name."
+              }
+            ]
+          },
+          "docs": "Retrieve a list of cardholders in the Command Centre system."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Alarms",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Alarms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://localhost:8904/api/alarms",
+            "params": [
+              {
+                "name": "top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "source",
+                "value": "",
+                "type": "query",
+                "description": "Filter by alarm source."
+              }
+            ]
+          },
+          "docs": "Retrieve a list of active alarms in the Command Centre system."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Access Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Access Groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://localhost:8904/api/access_groups"
+          },
+          "docs": "Retrieve a list of access groups configured in Command Centre."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://localhost:8904/api/events",
+            "params": [
+              {
+                "name": "after",
+                "value": "",
+                "type": "query",
+                "description": "Return events after this event ID."
+              }
+            ]
+          },
+          "docs": "Retrieve recent events from Command Centre."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
