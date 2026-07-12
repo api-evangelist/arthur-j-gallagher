@@ -60,6 +60,8 @@ apis:
       - type: Documentation
         url: https://developer.gallagherbassett.com/
 common:
+  - type: DomainSecurity
+    url: security/arthur-j-gallagher-domain-security.yml
   - type: Portal
     url: https://www.ajg.com/
     title: Arthur J. Gallagher Website
