@@ -60,6 +60,8 @@ apis:
       - type: Documentation
         url: https://developer.gallagherbassett.com/
 common:
+  - type: AgenticAccess
+    url: agentic-access/arthur-j-gallagher-agentic-access.yml
   - type: DomainSecurity
     url: security/arthur-j-gallagher-domain-security.yml
   - type: Portal
