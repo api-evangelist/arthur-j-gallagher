@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: Gallagher Command Centre REST Access Groups Cardholders API
+  description: The Gallagher Command Centre REST API provides HTTP functions for querying the Command Centre database and integrating third-party systems with Gallagher's security platform. Supports access control, alarm monitoring, cardholder management, and site management operations.
+  version: 9.0.0
+  contact:
+    name: Gallagher Security
+    url: https://gallaghersecurity.github.io/
+  license:
+    name: Proprietary
+    url: https://security.gallagher.com/
+servers:
+- url: https://localhost:8904/api
+  description: Local Command Centre server (default). Replace with your Command Centre server address.
+tags:
+- name: Cardholders
+  description: Manage cardholders in the security system.
+paths:
+  /cardholders:
+    get:
+      operationId: listCardholders
+      summary: List Cardholders
+      description: Retrieve a list of cardholders in the Command Centre system.
+      tags:
+      - Cardholders
+      parameters:
+      - name: top
+        in: query
+        required: false
+        description: Maximum number of results to return.
+        schema:
+          type: integer
+      - name: name
+        in: query
+        required: false
+        description: Filter by cardholder name.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of cardholders returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        href:
+                          type: string
+                        id:
+                          type: string
+                        firstName:
+                          type: string
+                        lastName:
+                          type: string
+                        authorised:
+                          type: boolean
+        '401':
+          description: Unauthorized.

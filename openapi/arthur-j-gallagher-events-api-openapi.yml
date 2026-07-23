@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: Gallagher Command Centre REST Access Groups Events API
+  description: The Gallagher Command Centre REST API provides HTTP functions for querying the Command Centre database and integrating third-party systems with Gallagher's security platform. Supports access control, alarm monitoring, cardholder management, and site management operations.
+  version: 9.0.0
+  contact:
+    name: Gallagher Security
+    url: https://gallaghersecurity.github.io/
+  license:
+    name: Proprietary
+    url: https://security.gallagher.com/
+servers:
+- url: https://localhost:8904/api
+  description: Local Command Centre server (default). Replace with your Command Centre server address.
+tags:
+- name: Events
+  description: Retrieve security events and audit logs.
+paths:
+  /events:
+    get:
+      operationId: listEvents
+      summary: List Events
+      description: Retrieve recent events from Command Centre.
+      tags:
+      - Events
+      parameters:
+      - name: after
+        in: query
+        required: false
+        description: Return events after this event ID.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Events returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  events:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                        time:
+                          type: string
+                          format: date-time
+                        message:
+                          type: string
+                        type:
+                          type: string
+                        source:
+                          type: object
+                          properties:
+                            href:
+                              type: string
+                            name:
+                              type: string
+                  next:
+                    type: object
+                    properties:
+                      href:
+                        type: string
+        '401':
+          description: Unauthorized.

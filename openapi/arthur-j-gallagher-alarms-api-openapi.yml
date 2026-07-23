@@ -1,0 +1,66 @@
+openapi: 3.1.0
+info:
+  title: Gallagher Command Centre REST Access Groups Alarms API
+  description: The Gallagher Command Centre REST API provides HTTP functions for querying the Command Centre database and integrating third-party systems with Gallagher's security platform. Supports access control, alarm monitoring, cardholder management, and site management operations.
+  version: 9.0.0
+  contact:
+    name: Gallagher Security
+    url: https://gallaghersecurity.github.io/
+  license:
+    name: Proprietary
+    url: https://security.gallagher.com/
+servers:
+- url: https://localhost:8904/api
+  description: Local Command Centre server (default). Replace with your Command Centre server address.
+tags:
+- name: Alarms
+  description: Monitor and manage security alarms.
+paths:
+  /alarms:
+    get:
+      operationId: listAlarms
+      summary: List Alarms
+      description: Retrieve a list of active alarms in the Command Centre system.
+      tags:
+      - Alarms
+      parameters:
+      - name: top
+        in: query
+        required: false
+        description: Maximum number of results to return.
+        schema:
+          type: integer
+      - name: source
+        in: query
+        required: false
+        description: Filter by alarm source.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of alarms returned successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        href:
+                          type: string
+                        id:
+                          type: string
+                        type:
+                          type: string
+                        source:
+                          type: string
+                        time:
+                          type: string
+                          format: date-time
+                        state:
+                          type: string
+        '401':
+          description: Unauthorized.
