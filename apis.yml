@@ -7,7 +7,19 @@ description: >-
   REST API for physical security integration) and Gallagher Bassett (which offers claims management APIs for third-party
   claims administration). Arthur J. Gallagher serves clients in over 130 countries through its international network of
   brokers and offices.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/arthur-j-gallagher.png
 url: https://raw.githubusercontent.com/api-evangelist/arthur-j-gallagher/refs/heads/main/apis.yml
 created: '2025-03-01'
 modified: '2026-05-19'
@@ -22,43 +34,78 @@ tags:
   - Benefits
   - Fortune 1000
 apis:
-  - aid: arthur-j-gallagher:command-centre-api
-    name: Gallagher Command Centre REST API
-    description: >-
-      REST API providing HTTP functions to query and integrate with the Gallagher Command Centre physical security
-      platform. Enables third-party systems to interact with access control, alarm monitoring, visitor management, and
-      site management features. Supports on-premise and cloud gateway connectivity since version 8.60.
-    humanURL: https://gallaghersecurity.github.io/
-    baseURL: https://localhost:8904/api
-    tags:
-      - Access Control
-      - Security
-      - Alarms
-      - Integration
-      - Physical Security
-    properties:
-      - type: Documentation
-        url: https://gallaghersecurity.github.io/
-      - type: OpenAPI
-        url: openapi/gallagher-command-centre-api.yml
-      - type: GitHubRepository
-        url: https://github.com/GallagherSecurity/cc-rest-docs
-  - aid: arthur-j-gallagher:gallagher-bassett-api
-    name: Gallagher Bassett Claims Management API
-    description: >-
-      API for integrating with Gallagher Bassett claims management services. Gallagher Bassett is a global third-party
-      claims administrator and subsidiary of Arthur J. Gallagher, providing workers compensation, liability, property,
-      and disability claims management.
-    humanURL: https://developer.gallagherbassett.com/
-    baseURL: https://api.gallagherbassett.com
-    tags:
-      - Claims
-      - Insurance
-      - Risk Management
-      - Workers Compensation
-    properties:
-      - type: Documentation
-        url: https://developer.gallagherbassett.com/
+- aid: arthur-j-gallagher:gallagher-bassett-api
+  name: Gallagher Bassett Claims Management API
+  description: >-
+    API for integrating with Gallagher Bassett claims management services. Gallagher Bassett is a global
+    third-party claims administrator and subsidiary of Arthur J. Gallagher, providing workers compensation,
+    liability, property, and disability claims management.
+  humanURL: https://developer.gallagherbassett.com/
+  baseURL: https://api.gallagherbassett.com
+  tags:
+  - Claims
+  - Insurance
+  - Risk Management
+  - Workers Compensation
+  properties:
+  - type: Documentation
+    url: https://developer.gallagherbassett.com/
+- aid: arthur-j-gallagher:arthur-j-gallagher-access-groups-api
+  name: Arthur J. Gallagher Access Groups API
+  description: Manage access control groups.
+  humanURL: https://gallaghersecurity.github.io/
+  baseURL: https://localhost:8904/api
+  tags:
+  - Access Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/arthur-j-gallagher-access-groups-api-openapi.yml
+  - type: Documentation
+    url: https://gallaghersecurity.github.io/
+  - type: GitHubRepository
+    url: https://github.com/GallagherSecurity/cc-rest-docs
+- aid: arthur-j-gallagher:arthur-j-gallagher-alarms-api
+  name: Arthur J. Gallagher Alarms API
+  description: Monitor and manage security alarms.
+  humanURL: https://gallaghersecurity.github.io/
+  baseURL: https://localhost:8904/api
+  tags:
+  - Alarms
+  properties:
+  - type: OpenAPI
+    url: openapi/arthur-j-gallagher-alarms-api-openapi.yml
+  - type: Documentation
+    url: https://gallaghersecurity.github.io/
+  - type: GitHubRepository
+    url: https://github.com/GallagherSecurity/cc-rest-docs
+- aid: arthur-j-gallagher:arthur-j-gallagher-cardholders-api
+  name: Arthur J. Gallagher Cardholders API
+  description: Manage cardholders in the security system.
+  humanURL: https://gallaghersecurity.github.io/
+  baseURL: https://localhost:8904/api
+  tags:
+  - Cardholders
+  properties:
+  - type: OpenAPI
+    url: openapi/arthur-j-gallagher-cardholders-api-openapi.yml
+  - type: Documentation
+    url: https://gallaghersecurity.github.io/
+  - type: GitHubRepository
+    url: https://github.com/GallagherSecurity/cc-rest-docs
+- aid: arthur-j-gallagher:arthur-j-gallagher-events-api
+  name: Arthur J. Gallagher Events API
+  description: Retrieve security events and audit logs.
+  humanURL: https://gallaghersecurity.github.io/
+  baseURL: https://localhost:8904/api
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/arthur-j-gallagher-events-api-openapi.yml
+  - type: Documentation
+    url: https://gallaghersecurity.github.io/
+  - type: GitHubRepository
+    url: https://github.com/GallagherSecurity/cc-rest-docs
 common:
   - type: AgenticAccess
     url: agentic-access/arthur-j-gallagher-agentic-access.yml
