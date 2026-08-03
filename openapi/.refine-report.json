@@ -1,0 +1,20 @@
+{
+  "provider": "arthur-j-gallagher",
+  "sources": [
+    "arthur-j-gallagher-access-groups-api-openapi.yml",
+    "arthur-j-gallagher-alarms-api-openapi.yml",
+    "arthur-j-gallagher-cardholders-api-openapi.yml",
+    "arthur-j-gallagher-events-api-openapi.yml"
+  ],
+  "outputs": [
+    "arthur-j-gallagher-access-groups-api-openapi.yml",
+    "arthur-j-gallagher-alarms-api-openapi.yml",
+    "arthur-j-gallagher-cardholders-api-openapi.yml",
+    "arthur-j-gallagher-events-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
