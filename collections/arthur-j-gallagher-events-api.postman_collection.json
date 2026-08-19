@@ -1,0 +1,148 @@
+{
+  "item": [
+    {
+      "id": "045aef7d-cf0a-48db-a1c2-9634ff02fd7a",
+      "name": "Events",
+      "description": {
+        "content": "Retrieve security events and audit logs.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "27d06310-46d1-49dc-b01d-6209aba9f1c9",
+          "name": "List Events",
+          "request": {
+            "name": "List Events",
+            "description": {
+              "content": "Retrieve recent events from Command Centre.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "after",
+                  "value": "<string>",
+                  "description": "Return events after this event ID."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "047f932a-48d1-40b9-a5fd-475a11b5c53f",
+              "name": "Events returned successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "after",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"events\": [\n    {\n      \"id\": \"string\",\n      \"time\": \"1985-11-24T16:27:06.931Z\",\n      \"message\": \"string\",\n      \"type\": \"string\",\n      \"source\": {\n        \"href\": \"string\",\n        \"name\": \"string\"\n      }\n    },\n    {\n      \"id\": \"string\",\n      \"time\": \"1956-01-19T22:12:40.515Z\",\n      \"message\": \"string\",\n      \"type\": \"string\",\n      \"source\": {\n        \"href\": \"string\",\n        \"name\": \"string\"\n      }\n    }\n  ],\n  \"next\": {\n    \"href\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9b90fa4b-c461-474d-ba1e-7a4bf25149c8",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "after",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://localhost:8904/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c5ff3d73-fe96-4f89-bc98-ef75b2895b12",
+    "name": "Gallagher Command Centre REST Access Groups Events API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Gallagher Command Centre REST API provides HTTP functions for querying the Command Centre database and integrating third-party systems with Gallagher's security platform. Supports access control, alarm monitoring, cardholder management, and site management operations.\n\nContact Support:\n Name: Gallagher Security",
+      "type": "text/plain"
+    }
+  }
+}

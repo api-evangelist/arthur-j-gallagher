@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gallagher Command Centre REST Access Groups Events API",
+    "version": "9.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://localhost:8904/api/events",
+            "params": [
+              {
+                "name": "after",
+                "value": "",
+                "type": "query",
+                "description": "Return events after this event ID."
+              }
+            ]
+          },
+          "docs": "Retrieve recent events from Command Centre."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

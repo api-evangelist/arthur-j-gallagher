@@ -1,0 +1,43 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gallagher Command Centre REST Access Groups Cardholders API",
+    "version": "9.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Cardholders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Cardholders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://localhost:8904/api/cardholders",
+            "params": [
+              {
+                "name": "top",
+                "value": "",
+                "type": "query",
+                "description": "Maximum number of results to return."
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "query",
+                "description": "Filter by cardholder name."
+              }
+            ]
+          },
+          "docs": "Retrieve a list of cardholders in the Command Centre system."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

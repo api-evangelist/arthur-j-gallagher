@@ -1,0 +1,131 @@
+{
+  "item": [
+    {
+      "id": "e08b7162-7e6b-4692-9166-f1a688a2a289",
+      "name": "Access Groups",
+      "description": {
+        "content": "Manage access control groups.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8a645be2-7da1-4690-89d6-645a8ced7d4f",
+          "name": "List Access Groups",
+          "request": {
+            "name": "List Access Groups",
+            "description": {
+              "content": "Retrieve a list of access groups configured in Command Centre.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "access_groups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "85c30edb-a111-4190-a187-8d0fc93f47be",
+              "name": "List of access groups returned successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "access_groups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"results\": [\n    {\n      \"href\": \"string\",\n      \"id\": \"string\",\n      \"name\": \"string\"\n    },\n    {\n      \"href\": \"string\",\n      \"id\": \"string\",\n      \"name\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4ee49a70-9c96-405d-ba46-244618e52732",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "access_groups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://localhost:8904/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e669c46e-13b4-4fb2-924c-e5692723b100",
+    "name": "Gallagher Command Centre REST Access Groups API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Gallagher Command Centre REST API provides HTTP functions for querying the Command Centre database and integrating third-party systems with Gallagher's security platform. Supports access control, alarm monitoring, cardholder management, and site management operations.\n\nContact Support:\n Name: Gallagher Security",
+      "type": "text/plain"
+    }
+  }
+}

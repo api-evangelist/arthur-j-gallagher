@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Gallagher Command Centre REST Access Groups API",
+    "version": "9.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Access Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List Access Groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://localhost:8904/api/access_groups"
+          },
+          "docs": "Retrieve a list of access groups configured in Command Centre."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

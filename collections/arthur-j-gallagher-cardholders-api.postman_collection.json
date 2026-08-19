@@ -1,0 +1,162 @@
+{
+  "item": [
+    {
+      "id": "dcc707cf-adc2-4c4b-85e4-f6c049705add",
+      "name": "Cardholders",
+      "description": {
+        "content": "Manage cardholders in the security system.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e1deb919-eb0c-4917-8748-2c9760332968",
+          "name": "List Cardholders",
+          "request": {
+            "name": "List Cardholders",
+            "description": {
+              "content": "Retrieve a list of cardholders in the Command Centre system.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cardholders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "top",
+                  "value": "<integer>",
+                  "description": "Maximum number of results to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>",
+                  "description": "Filter by cardholder name."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "96ce7138-7a71-4cac-8292-fe2b11f309a3",
+              "name": "List of cardholders returned successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cardholders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "top",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "name",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"results\": [\n    {\n      \"href\": \"string\",\n      \"id\": \"string\",\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"authorised\": false\n    },\n    {\n      \"href\": \"string\",\n      \"id\": \"string\",\n      \"firstName\": \"string\",\n      \"lastName\": \"string\",\n      \"authorised\": false\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "27901c23-ee6d-43f9-abd6-d5d5d5da1ea9",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cardholders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "top",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "name",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://localhost:8904/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0f0edb07-0690-4911-a276-366429fafe1e",
+    "name": "Gallagher Command Centre REST Access Groups Cardholders API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Gallagher Command Centre REST API provides HTTP functions for querying the Command Centre database and integrating third-party systems with Gallagher's security platform. Supports access control, alarm monitoring, cardholder management, and site management operations.\n\nContact Support:\n Name: Gallagher Security",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "item": [
+    {
+      "id": "3e54f1c2-a193-45f1-96de-d35a1ddd33a5",
+      "name": "Alarms",
+      "description": {
+        "content": "Monitor and manage security alarms.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "53a74a5c-4673-4288-bcfd-8b3d3d422a7f",
+          "name": "List Alarms",
+          "request": {
+            "name": "List Alarms",
+            "description": {
+              "content": "Retrieve a list of active alarms in the Command Centre system.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "alarms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "top",
+                  "value": "<integer>",
+                  "description": "Maximum number of results to return."
+                },
+                {
+                  "disabled": false,
+                  "key": "source",
+                  "value": "<string>",
+                  "description": "Filter by alarm source."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7e12f593-af04-4931-a290-815cb3132d68",
+              "name": "List of alarms returned successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "alarms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "top",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"results\": [\n    {\n      \"href\": \"string\",\n      \"id\": \"string\",\n      \"type\": \"string\",\n      \"source\": \"string\",\n      \"time\": \"1994-03-14T18:27:34.117Z\",\n      \"state\": \"string\"\n    },\n    {\n      \"href\": \"string\",\n      \"id\": \"string\",\n      \"type\": \"string\",\n      \"source\": \"string\",\n      \"time\": \"1999-10-13T22:30:35.864Z\",\n      \"state\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "cfe0c2b0-3084-4058-b5d0-c1ce33ab7572",
+              "name": "Unauthorized.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "alarms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "top",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "source",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://localhost:8904/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "cebb7acd-6ac6-475d-ac7a-39d741f644e5",
+    "name": "Gallagher Command Centre REST Access Groups Alarms API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Gallagher Command Centre REST API provides HTTP functions for querying the Command Centre database and integrating third-party systems with Gallagher's security platform. Supports access control, alarm monitoring, cardholder management, and site management operations.\n\nContact Support:\n Name: Gallagher Security",
+      "type": "text/plain"
+    }
+  }
+}
