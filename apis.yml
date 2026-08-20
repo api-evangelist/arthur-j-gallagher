@@ -98,6 +98,8 @@ apis:
   humanURL: https://gallaghersecurity.github.io/
   baseURL: https://localhost:8904/api
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
