@@ -121,6 +121,9 @@ apis:
   - type: GitHubRepository
     url: https://github.com/GallagherSecurity/cc-rest-docs
 common:
+  - type: CapabilityMap
+    url: capabilities/arthur-j-gallagher-capability-edges.yml
+    name: Arthur J. Gallagher Business Capability Map
   - type: AgenticAccess
     url: agentic-access/arthur-j-gallagher-agentic-access.yml
   - type: DomainSecurity

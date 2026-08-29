@@ -1,0 +1,33 @@
+slug: arthur-j-gallagher
+provider: Arthur J. Gallagher
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Insurance
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Access Groups
+  spec_file: arthur-j-gallagher-access-groups-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: '"Supports access control, alarm monitoring, cardholder management"; GET /access_groups List
+    Access Groups'
+  reason: Physical access control groups in a security platform — identity & access management, not an
+    insurance capability.
+- tag: Cardholders
+  spec_file: arthur-j-gallagher-cardholders-api-openapi.yml
+  capability_id: BC-620.20
+  capability_id_l1: BC-620
+  capability_name: Identity & Access Management
+  confidence: 0.8
+  evidence: GET /cardholders listCardholders; "cardholder management, and site management operations"
+  reason: Access credential holder records in a physical security system — identity and access administration.
