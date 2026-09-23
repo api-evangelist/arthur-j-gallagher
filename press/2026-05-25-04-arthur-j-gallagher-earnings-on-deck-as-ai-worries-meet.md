@@ -1,7 +1,9 @@
 ---
 title: Arthur J Gallagher earnings on deck as AI worries meet ...
 url: https://www.investing.com/news/earnings/arthur-j-gallagher-earnings-on-deck-as-ai-worries-meet-revenue-growth-93CH-4650464
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Arthur J. Gallagher" press release artificial intelligence'
 position: 4
 source: serpapi-google

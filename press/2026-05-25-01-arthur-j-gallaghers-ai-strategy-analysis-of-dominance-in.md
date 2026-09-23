@@ -1,7 +1,9 @@
 ---
 title: 'Arthur J Gallagher''s AI Strategy: Analysis of Dominance in ...'
 url: https://www.klover.ai/arthur-j-gallagher-ai-strategy-analysis-of-dominance-in-insurance-ai/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Arthur J. Gallagher" press release artificial intelligence'
 position: 1
 source: serpapi-google

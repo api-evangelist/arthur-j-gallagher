@@ -1,7 +1,9 @@
 ---
 title: Two-thirds of organizations invest in AI training as adoption ...
 url: https://www.prnewswire.com/news-releases/two-thirds-of-organizations-invest-in-ai-training-as-adoption-accelerates---but-governance-gaps-remain-302722954.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Arthur J. Gallagher" press release artificial intelligence'
 position: 3
 source: serpapi-google

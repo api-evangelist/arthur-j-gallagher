@@ -1,7 +1,9 @@
 ---
 title: Gallagher launches Blueprint AI risk scoring framework
 url: https://www.stocktitan.net/news/AJG/gallagher-launches-gallagher-blueprint-pairing-ai-and-expert-insight-rikhjs4fhwpo.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Arthur J. Gallagher" press release artificial intelligence'
 position: 5
 source: serpapi-google
