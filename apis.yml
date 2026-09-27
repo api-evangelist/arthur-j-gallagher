@@ -9,6 +9,9 @@ description: >-
   brokers and offices.
 deliveryModel:
   model: unknown
+  license_evidence:
+    not_product:
+    - gallaghersecurity/cc-rest-docs
   open_source: unknown
   commercial: false
   callable_host: false
@@ -16,8 +19,8 @@ deliveryModel:
   confidence: low
   source:
   - openapi
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -45,6 +48,7 @@ tags:
   - Security
   - Benefits
   - Fortune 1000
+  - Employee Benefits
 apis:
 - aid: arthur-j-gallagher:gallagher-bassett-api
   name: Gallagher Bassett Claims Management API
