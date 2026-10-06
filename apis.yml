@@ -37,7 +37,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/arthur-j-gallagher.png
 url: https://raw.githubusercontent.com/api-evangelist/arthur-j-gallagher/refs/heads/main/apis.yml
 created: '2025-03-01'
-modified: '2026-05-19'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 type: Index
 tags:
@@ -125,6 +125,8 @@ apis:
   - type: GitHubRepository
     url: https://github.com/GallagherSecurity/cc-rest-docs
 common:
+  - url: https://developer.gallagherbassett.com/blog/
+    type: Blog
   - type: CapabilityMap
     url: capabilities/arthur-j-gallagher-capability-edges.yml
     name: Arthur J. Gallagher Business Capability Map
