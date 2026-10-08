@@ -125,6 +125,12 @@ apis:
   - type: GitHubRepository
     url: https://github.com/GallagherSecurity/cc-rest-docs
 common:
+  - type: Plans
+    url: plans/arthur-j-gallagher-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/arthur-j-gallagher-rate-limits.yml
+  - type: FinOps
+    url: finops/arthur-j-gallagher-finops.yml
   - url: https://developer.gallagherbassett.com/blog/
     type: Blog
   - type: CapabilityMap
