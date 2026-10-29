@@ -1,4 +1,4 @@
-# Arthur J. Gallagher (arthur-j-gallagher)
+# Arthur J. Gallagher
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,82 +66,86 @@
 
 Arthur J. Gallagher & Co. is a global insurance brokerage, risk management, and consulting firm headquartered in Rolling Meadows, Illinois. The company provides insurance brokerage, risk management, employee benefits, and retirement services to clients worldwide. Its subsidiaries include Gallagher Security (which offers the Command Centre REST API for physical security integration) and Gallagher Bassett (which offers claims management APIs for third-party claims administration). Arthur J. Gallagher serves clients in over 130 countries through its international network of brokers and offices.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/arthur-j-gallagher/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/arthur-j-gallagher/refs/heads/main/apis.yml)
+**Areas:** Insurance · Brokerage · Risk Management · Claims Management · Security · Benefits · Fortune 1000 · Employee Benefits
 
-## Scope
+## Arthur J. Gallagher on APIs.io
 
-- **Type:** Index
+Everything profiled for Arthur J. Gallagher is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/arthur-j-gallagher/](https://apis.io/providers/arthur-j-gallagher/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- Insurance
-- Brokerage
-- Risk Management
-- Claims Management
-- Security
-- Benefits
+- [Gallagher Bassett Claims Management API](https://apis.io/apis/arthur-j-gallagher/gallagher-bassett-api/) — API for integrating with Gallagher Bassett claims management services. Gallagher Bassett is a global third-party claims administrator and subsidiary of…
+- [Arthur J. Gallagher Access Groups API](https://apis.io/apis/arthur-j-gallagher/arthur-j-gallagher-access-groups-api/) — Manage access control groups.
+- [Arthur J. Gallagher Alarms API](https://apis.io/apis/arthur-j-gallagher/arthur-j-gallagher-alarms-api/) — Monitor and manage security alarms.
+- [Arthur J. Gallagher Cardholders API](https://apis.io/apis/arthur-j-gallagher/arthur-j-gallagher-cardholders-api/) — Manage cardholders in the security system.
+- [Arthur J. Gallagher Events API](https://apis.io/apis/arthur-j-gallagher/arthur-j-gallagher-events-api/) — Retrieve security events and audit logs.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-03-01
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Gallagher Command Centre REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-REST API providing HTTP functions to query and integrate with the Gallagher Command Centre physical security platform. Enables third-party systems to interact with access control, alarm monitoring, visitor management, and site management features. Supports on-premise and cloud gateway connectivity since version 8.60.
+- [Arthur J Gallagher Agentic Access](https://apis.io/agentic-access/arthur-j-gallagher/arthur-j-gallagher-agentic-access/)
 
-- **Human URL:** [https://gallaghersecurity.github.io/](https://gallaghersecurity.github.io/)
-- **Base URL:** `https://localhost:8904/api`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Access Control
-- Security
-- Alarms
-- Integration
-- Physical Security
+- [Gallagher Command Centre REST Access Groups API](https://apis.io/collections/arthur-j-gallagher/open-arthur-j-gallagher-access-groups-api/)
+- [Gallagher Command Centre REST Access Groups Alarms API](https://apis.io/collections/arthur-j-gallagher/open-arthur-j-gallagher-alarms-api/)
+- [Gallagher Command Centre REST Access Groups Cardholders API](https://apis.io/collections/arthur-j-gallagher/open-arthur-j-gallagher-cardholders-api/)
+- [Gallagher Command Centre REST Access Groups Events API](https://apis.io/collections/arthur-j-gallagher/open-arthur-j-gallagher-events-api/)
+- [Gallagher Command Centre REST API](https://apis.io/collections/arthur-j-gallagher/open-gallagher-command-centre-api/)
 
-#### Properties
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Arthur J Gallagher Domain Security](https://apis.io/security/arthur-j-gallagher/arthur-j-gallagher-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Arthur J Gallagher Plans Pricing](https://apis.io/plans/arthur-j-gallagher/arthur-j-gallagher-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Arthur J Gallagher Rate Limits](https://apis.io/rate-limits/arthur-j-gallagher/arthur-j-gallagher-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Arthur J Gallagher Finops](https://apis.io/finops/arthur-j-gallagher/arthur-j-gallagher-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Documentation](https://gallaghersecurity.github.io/)
-- [OpenAPI](openapi/gallagher-command-centre-api.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/gallagher-command-centre-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gallagher-command-centre-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [GitHub Repository](https://github.com/GallagherSecurity/cc-rest-docs)
+- [Blog](https://developer.gallagherbassett.com/blog/)
+- [GitHub](https://github.com/GallagherSecurity)
 
-### Gallagher Bassett Claims Management API
+## API Evangelist rating
 
-API for integrating with Gallagher Bassett claims management services. Gallagher Bassett is a global third-party claims administrator and subsidiary of Arthur J. Gallagher, providing workers compensation, liability, property, and disability claims management.
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
 
-- **Human URL:** [https://developer.gallagherbassett.com/](https://developer.gallagherbassett.com/)
-- **Base URL:** `https://api.gallagherbassett.com`
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
 
-#### Tags
+## How this profile is made
 
-- Claims
-- Insurance
-- Risk Management
-- Workers Compensation
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-#### Properties
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Arthur J. Gallagher: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-- [Documentation](https://developer.gallagherbassett.com/)
-- [Postman Collection](collections/gallagher-command-centre-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/gallagher-command-centre-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Open an issue
 
-## Common Properties
-
-- [Portal](https://www.ajg.com/)
-- [Documentation](https://gallaghersecurity.github.io/)
-- [Portal](https://developer.gallagherbassett.com/)
-- [GitHub Organization](https://github.com/GallagherSecurity)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
-
-## Maintainers
-
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/arthur-j-gallagher/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
